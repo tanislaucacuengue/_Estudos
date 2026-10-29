@@ -1,0 +1,25 @@
+# Dependências instaladas localmente
+node_modules/
+
+# Credenciais e configurações locais
+.env
+.env.*
+!.env.example
+
+# Artefactos de compilação
+*.exe
+*.o
+*.obj
+*.class
+/build/
+/dist/
+
+# Ficheiros temporários e logs
+*.log
+*.tmp
+.DS_Store
+desktop.ini
+
+# Configurações locais de editores
+.vscode/
+.idea/

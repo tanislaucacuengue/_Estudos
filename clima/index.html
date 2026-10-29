@@ -3,92 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulta as condições meteorológicas atuais de uma cidade.">
     <title>Previsão do tempo</title>
     <link rel="stylesheet" href="src/css/style.css">
-
-    <!--Link do fonte awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
-    
-    <div id="conteiner">
+    <main id="conteiner">
         <form id="pesquisa">
-            <i class="fa-solid fa-location-dot"></i>
-            <input type="search" name="city_nome" id="city_nome" placeholder="Buscar cidade">
-
-            <button type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <input type="search" name="city_nome" id="city_nome" placeholder="Buscar cidade" aria-label="Nome da cidade" required minlength="2">
+            <button type="submit" aria-label="Pesquisar cidade">
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
             </button>
         </form>
-
-        <div id="clima">
-            <h1 id="titulo">Luanda, AO</h1>
-
+        <section id="clima" aria-live="polite" aria-label="Condições meteorológicas">
+            <h1 id="titulo"></h1>
             <div id="infor">
                 <div id="temp">
-                    <img src="https://openweathermap.org/img/wn/03d.png" alt="Imagem repesentando o clima" id="temp_img">
-
+                    <i class="fa-solid fa-cloud-sun" id="temp_icon" aria-hidden="true"></i>
                     <div>
-                        <p id="temp_valor">
-                            32 
-                        </p>
-
-                        <p id="temp_descricao">
-                            Ensolarado
-                        </p>
+                        <p id="temp_valor"></p>
+                        <p id="temp_descricao"></p>
                     </div>
                 </div>
-
                 <div id="outra_infor">
-                    
                     <div class="info">
-                        <i class="fa-solid fa-temperature-high" id="temp_max_icone"></i>
-
+                        <i class="fa-solid fa-temperature-high" id="temp_max_icone" aria-hidden="true"></i>
                         <div>
-                            <h2>Tempo max</h2>
-
-                            <p id="temp_max">30</p>
+                            <h2>Máxima do dia</h2>
+                            <p id="temp_max"></p>
                         </div>
                     </div>
-
                     <div class="info">
-                         <i class="fa-solid fa-temperature-low" id="temp_min_icone"></i>
-
+                        <i class="fa-solid fa-temperature-low" id="temp_min_icone" aria-hidden="true"></i>
                         <div>
-                            <h2>Tempo min</h2>
-
-                            <p id="temp_min">12</p>
+                            <h2>Mínima do dia</h2>
+                            <p id="temp_min"></p>
                         </div>
                     </div>
-
                     <div class="info">
-                         <i class="fa-solid fa-droplet" id="umid_icone"></i>
-
+                        <i class="fa-solid fa-droplet" id="umid_icone" aria-hidden="true"></i>
                         <div>
-                            <h2>Umidade</h2>
-
-                            <p id="umid">50</p>
+                            <h2>Humidade</h2>
+                            <p id="umid"></p>
                         </div>
                     </div>
-
                     <div class="info">
-                         <i class="fa-solid fa-wind" id="vento_icone"></i>
-
+                        <i class="fa-solid fa-wind" id="vento_icone" aria-hidden="true"></i>
                         <div>
                             <h2>Vento</h2>
-
-                            <p id="vento">50 km/h</p>
+                            <p id="vento"></p>
                         </div>
                     </div>
                 </div>
-
             </div>
-        </div>
-        <div id="alert">
-
-        </div>
-    </div>
-        
-    <script src="src/js/script.js"></script>
+        </section>
+        <p id="alert" role="status" aria-live="polite"></p>
+        <footer class="creditos">
+            Dados meteorológicos: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a> · Localizações: GeoNames
+        </footer>
+    </main>
+    <script src="src/js/script.js" defer></script>
 </body>
 </html>

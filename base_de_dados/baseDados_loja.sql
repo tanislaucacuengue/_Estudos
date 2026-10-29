@@ -1,3 +1,4 @@
+-- Registos pessoais substituídos por dados fictícios para publicação.
 create database loja character set utf8mb4 collate utf8mb4_general_ci;
 
 use loja;
@@ -19,7 +20,7 @@ create table cliente(
     email varchar(100),
     telefone varchar(13),
     endereco varchar(150),
-    data_nascimento date, 
+    data_nascimento date,
     genero enum('f', 'm') default 'f'
 );
 
@@ -31,13 +32,13 @@ values('Pão', 'Alimentar', 2500.00, 200, default, '2027-02-10', 'Padaria Pão d
 ('Açucar', 'Alimentar', 600.00, 120, default, '2027-02-10', 'Padaria Pão doce'),
 ('Sumo', 'Bebidas', 350.00, 20, default, '2027-02-10', 'Empresa Refriango');
 
-INSERT INTO cliente (nome_cliente, email, telefone, endereco, data_nascimento, genero)
-VALUES
-('Benjamim Cacuengue', 'benja@gmail.com', '920000000', 'Luanda', '200#-02-10', 'm'),
-('Jeremias Zangui zua', 'zua@gmail.com', '923333333', 'Viana', '200#-04-10', 'm'),
-('Guilherme Jaime', 'gui@gmail.com', '924444444', 'Kilamba Kiaxi', '200#-04-10', 'm'),
-('Denilson Morais', 'deni@gmail.com', '926666666', 'Zango', '200#-05-10', 'm'),
-('Isaac Mulai antonio', 'mulai@gmail.com', '92777777', 'Belas', '200#-05-10', 'm');
+INSERT INTO cliente (nome_cliente, email, telefone, endereco, data_nascimento, genero) VALUES
+
+    ('Cliente de exemplo 1', 'utilizador1@example.invalid', '000000000', 'Endereco de demonstracao', '2000-01-01', 'm'),
+    ('Cliente de exemplo 2', 'utilizador2@example.invalid', '000000000', 'Endereco de demonstracao', '2000-01-01', 'm'),
+    ('Cliente de exemplo 3', 'utilizador3@example.invalid', '000000000', 'Endereco de demonstracao', '2000-01-01', 'm'),
+    ('Cliente de exemplo 4', 'utilizador4@example.invalid', '000000000', 'Endereco de demonstracao', '2000-01-01', 'm'),
+    ('Cliente de exemplo 5', 'utilizador5@example.invalid', '000000000', 'Endereco de demonstracao', '2000-01-01', 'm');
 
 select * from produto
 limit 3;
