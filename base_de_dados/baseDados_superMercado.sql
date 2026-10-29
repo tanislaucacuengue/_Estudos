@@ -1,3 +1,4 @@
+-- Registos pessoais substituídos por dados fictícios para publicação.
 -- criar a base de dados
 create database super_mercado character set utf8mb4 collate utf8mb4_general_ci;
 
@@ -17,9 +18,9 @@ describe produto;
 
 -- inserir dados na tabela produto
 insert into produto values(default, 'Farinha', 'Igrediente usado na cozinha.', default, 2000.00);
-  
+
   select * from produto;
-  
+
   create table pedido (
   id_pedido int primary key auto_increment,
   id_cliente int,
@@ -39,27 +40,28 @@ describe pedido;
 
 -- inserir dados na tabela pedido
 insert into pedido values(default, '1', '1', 7, 10, '1', default, default, '18:00');
-  
+
   select * from pedido;
-  
-  
+
+
 -- criar a tabela cliente
 create table cliente (
   id_cliente int primary key auto_increment,
   nome_cliente varchar(150) not null,
   email_cliente varchar(100)  not null,
   contacto int(9),
-  genero enum('f', 'm') default 'f' 
+  genero enum('f', 'm') default 'f'
 );
 
 describe cliente;
 
 -- inserir dados na tabela cliente
-insert into cliente values(default, 'Delcio Balamo', 'balamo@gmail.com', 92414568, 'm');
-  
+insert into cliente values
+    (default, 'Cliente de exemplo 1', 'utilizador1@example.invalid', '000000000', 'm');
+
   select * from cliente;
-  
-  
+
+
   -- criar a tabela pagamento
 create table pagamento (
   id_pagamento int primary key auto_increment,
@@ -71,9 +73,9 @@ describe pagamento;
 
 -- inserir dados na tabela pagamento
 insert into pagamento values(default, 'via dinheiro ', 500.00);
-  
+
   select * from pagamento;
-  
+
 -- alteração na tabela cliente
 alter table cliente change contacto cliente_contacto int(9);
 alter table cliente change genero cliente_genero enum('f', 'm') default 'f';
