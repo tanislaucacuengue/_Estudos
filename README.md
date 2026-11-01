@@ -50,3 +50,11 @@ Os diretórios contêm trabalhos de estudo independentes. Antes de uma alteraç�
 ## Licenças e créditos
 
 A licença na raiz aplica-se nos termos descritos em `LICENSE`. Verifica os créditos e as licenças dos materiais de terceiros antes de redistribuir imagens, trabalhos de curso, ficheiros de laboratório ou exemplos cuja autoria não seja tua. A pasta `clima/` tem uma nota específica de atribuição e utilização dos dados meteorológicos.
+
+## Autor e percurso de desenvolvimento
+
+**Desenvolvedor:** Benjamim Tanislau José Cacuengue.
+
+Este trabalho faz parte do meu percurso contínuo de aprendizagem e desenvolvimento de competências. Cada projecto representa uma oportunidade prática de consolidar conhecimentos, experimentar soluções e crescer como desenvolvedor.
+
+Nos projectos colaborativos, esta identificação não substitui os créditos e as responsabilidades dos demais membros da equipa indicados neste README.

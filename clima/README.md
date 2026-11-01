@@ -21,3 +21,11 @@ Os dados meteorológicos da Open-Meteo são publicados sob CC BY 4.0. Mantém a 
 - [Documentação da API de previsão](https://open-meteo.com/en/docs)
 - [Documentação da API de geocodificação](https://open-meteo.com/en/docs/geocoding-api)
 - [Planos e condições de utilização](https://open-meteo.com/en/pricing)
+
+## Autor e percurso de desenvolvimento
+
+**Desenvolvedor:** Benjamim Tanislau José Cacuengue.
+
+Este trabalho faz parte do meu percurso contínuo de aprendizagem e desenvolvimento de competências. Cada projecto representa uma oportunidade prática de consolidar conhecimentos, experimentar soluções e crescer como desenvolvedor.
+
+Nos projectos colaborativos, esta identificação não substitui os créditos e as responsabilidades dos demais membros da equipa indicados neste README.
